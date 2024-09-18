@@ -37,3 +37,9 @@ require'lspconfig'.gopls.setup{}
 -- Lua
 require'lspconfig'.lua_ls.setup{}
 
+-- JSON
+require'lspconfig'.jsonls.setup{}
+
+-- YAML
+require'lspconfig'.yamlls.setup{}
+
