@@ -16,4 +16,10 @@ vim.keymap.set('n', '<leader>xx', ':Ex<CR>', {})
 vim.keymap.set('n', '<leader>xs', ':Sex<CR>', {})
 vim.keymap.set('n', '<leader>xv', ':Vex<CR>', {})
 
+-- Jump and center
+vim.keymap.set('n', 'n', 'nzz', {})
+vim.keymap.set('n', 'N', 'Nzz', {})
+vim.keymap.set('n', '<C-o>', '<C-o>zz', {})
+vim.keymap.set('n', '<C-i>', '<C-i>zz', {})
+
 
