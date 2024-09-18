@@ -20,3 +20,5 @@ vim.keymap.set('n', '<leader>sw', builtin.lsp_workspace_symbols, {})
 vim.keymap.set('n', '<leader>r', builtin.lsp_references, {})
 vim.keymap.set('n', '<leader>T', builtin.treesitter, {})
 
+-- Commands
+vim.keymap.set('n', '<leader>p', builtin.commands, {})

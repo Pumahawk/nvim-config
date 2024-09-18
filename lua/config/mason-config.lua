@@ -1,3 +1,7 @@
+-- Custom command names
+commands = {
+	organize_import = "LspOrganizeImports"
+}
 -- Mason configuration
 
 require("mason").setup()
@@ -12,7 +16,14 @@ require('lspconfig').jdtls.setup({})
 
 -- Web setup
 require'lspconfig'.html.setup{}
-require'lspconfig'.ts_ls.setup{}
+require'lspconfig'.ts_ls.setup{
+	on_attach=function()
+		-- Organize import with Typescript LSP
+		vim.api.nvim_create_user_command(commands.organize_import, function()
+		    vim.lsp.buf.execute_command({command = "_typescript.organizeImports", arguments = {vim.fn.expand("%:p")}})
+		end, {})
+	end
+}
 require'lspconfig'.eslint.setup{}
 require'lspconfig'.angularls.setup{}
 
