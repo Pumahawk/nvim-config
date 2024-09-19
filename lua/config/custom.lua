@@ -1,8 +1,8 @@
 -- Vim basic configurazion
 vim.wo.relativenumber = true
 vim.wo.number = true
-vim.wo.scrolloff = 10
 vim.cmd.colorscheme "catppuccin"
+vim.cmd "setglobal scrolloff=10"
 
 -- Paste
 vim.cmd('xnoremap <leader>p "_dP')
