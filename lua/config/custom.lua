@@ -3,6 +3,7 @@ vim.wo.relativenumber = true
 vim.wo.number = true
 vim.cmd.colorscheme "catppuccin"
 vim.cmd "setglobal scrolloff=10"
+vim.cmd "setglobal shellcmdflag=-lc"
 
 -- Paste
 vim.cmd('xnoremap <leader>p "_dP')
