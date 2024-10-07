@@ -23,3 +23,6 @@ vim.keymap.set('n', '<leader>T', builtin.treesitter, {})
 
 -- Commands
 vim.keymap.set('n', '<leader>p', builtin.commands, {})
+
+-- Diagnostic
+vim.keymap.set('n', '<leader>D', builtin.diagnostics, {})

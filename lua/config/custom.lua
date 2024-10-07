@@ -29,3 +29,9 @@ vim.keymap.set('n', '<leader>v', '"+p', {})
 vim.keymap.set('n', '<leader>V', '"+P', {})
 vim.keymap.set('v', '<leader>v', '"+P', {})
 
+-- Diasgnostic
+vim.keymap.set('n', '<leader>dn', ':lua vim.diagnostic.goto_next()<CR>', {})
+vim.keymap.set('n', '<leader>dp', ':lua vim.diagnostic.goto_prev()<CR>', {})
+vim.keymap.set('n', '<leader>do', ':lua vim.diagnostic.open_float()<CR>', {})
+vim.keymap.set('n', '<leader>dl', ':lua vim.diagnostic.setloclist()<CR>', {})
+vim.keymap.set('n', '<leader>da', ':lua vim.diagnostic.setqflist()<CR>', {})
