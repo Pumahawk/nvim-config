@@ -23,4 +23,9 @@ vim.keymap.set('n', '<leader>xv', ':Vex<CR>', {})
 -- vim.keymap.set('n', '<C-o>', '<C-o>zz', {})
 -- vim.keymap.set('n', '<C-i>', '<C-i>zz', {})
 
+-- Copy and Paste
+vim.keymap.set({'n', 'v'}, '<leader>c', '"+y', {})
+vim.keymap.set('n', '<leader>v', '"+p', {})
+vim.keymap.set('n', '<leader>V', '"+P', {})
+vim.keymap.set('v', '<leader>v', '"+P', {})
 
