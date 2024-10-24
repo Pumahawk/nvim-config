@@ -44,3 +44,6 @@ require'lspconfig'.jsonls.setup{}
 -- YAML
 require'lspconfig'.yamlls.setup{}
 
+-- Helm
+require'lspconfig'.helm_ls.setup{}
+
