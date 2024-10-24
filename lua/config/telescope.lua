@@ -20,6 +20,8 @@ vim.keymap.set('n', '<leader>ss', builtin.lsp_document_symbols, {})
 vim.keymap.set('n', '<leader>sw', builtin.lsp_dynamic_workspace_symbols, {})
 vim.keymap.set('n', '<leader>r', builtin.lsp_references, {})
 vim.keymap.set('n', '<leader>T', builtin.treesitter, {})
+vim.keymap.set('n', '<leader>fi', builtin.lsp_incoming_calls, {})
+vim.keymap.set('n', '<leader>fO', builtin.lsp_outgoing_calls, {})
 
 -- Commands
 vim.keymap.set('n', '<leader>p', builtin.commands, {})
