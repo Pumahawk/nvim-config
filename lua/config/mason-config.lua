@@ -12,8 +12,8 @@ require("mason-lspconfig").setup{
 -- START LSP Configuration
 --
 -- Java setup
--- require('lspconfig').jdtls.setup({})
-require'lspconfig'.java_language_server.setup{}
+require('lspconfig').jdtls.setup({})
+-- require'lspconfig'.java_language_server.setup{}
 
 -- Web setup
 require'lspconfig'.html.setup{}
