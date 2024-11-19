@@ -19,6 +19,14 @@ require('lspconfig').jdtls.setup({
 		    require'jdtls'.update_project_config()
 		end, {})
 	end,
+	settings = {
+		java = {
+			settings = {
+				-- Aggiungi le System Properties
+				vmArgs = "-Dspotless.check.skip=true"
+			},
+		},
+	},
 })
 
 -- require'lspconfig'.java_language_server.setup{}
