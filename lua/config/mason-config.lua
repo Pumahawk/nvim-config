@@ -1,5 +1,6 @@
 -- Custom command names
 commands = {
+	config_reload = "LspConfigReload",
 	organize_import = "LspOrganizeImports"
 }
 -- Mason configuration
@@ -12,7 +13,14 @@ require("mason-lspconfig").setup{
 -- START LSP Configuration
 --
 -- Java setup
-require('lspconfig').jdtls.setup({})
+require('lspconfig').jdtls.setup({
+	on_attach=function ()
+		vim.api.nvim_create_user_command(commands.config_reload, function()
+		    require'jdtls'.update_project_config()
+		end, {})
+	end,
+})
+
 -- require'lspconfig'.java_language_server.setup{}
 
 -- Web setup
