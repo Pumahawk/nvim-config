@@ -28,6 +28,15 @@ require('lspconfig').jdtls.setup({
 				-- Aggiungi le System Properties
 				vmArgs = "-Dspotless.check.skip=true"
 			},
+			completion = {
+				favoriteStaticMembers = {
+					"org.mockito.Mockito.*",
+					"org.mockito.ArgumentMatchers.*",
+					"org.assertj.core.api.Assertions.*",
+					"com.aruba.simpl.common.test.TestUtil.*",
+					"org.junit.jupiter.api.Assertions.*",
+				},
+			},
 		},
 	},
 })
