@@ -15,6 +15,9 @@ require("mason-lspconfig").setup{
 -- Java setup
 require('lspconfig').jdtls.setup({
 	on_attach=function ()
+		vim.api.nvim_create_user_command(commands.organize_import, function()
+		    require'jdtls'.organize_imports()
+		end, {})
 		vim.api.nvim_create_user_command(commands.config_reload, function()
 		    require'jdtls'.update_project_config()
 		end, {})
