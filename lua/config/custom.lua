@@ -4,6 +4,7 @@ vim.wo.number = true
 vim.cmd.colorscheme "catppuccin"
 vim.cmd "setglobal scrolloff=10"
 vim.cmd "setglobal shellcmdflag=-lc"
+vim.cmd "set foldcolumn=auto:9"
 
 -- Paste
 vim.cmd('xnoremap <leader>p "_dP')
