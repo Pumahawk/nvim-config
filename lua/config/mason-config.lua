@@ -31,6 +31,7 @@ require('lspconfig').jdtls.setup({
 			completion = {
 				favoriteStaticMembers = {
 					"org.mockito.Mockito.*",
+					"org.mockito.BDDMockito.*",
 					"org.mockito.ArgumentMatchers.*",
 					"org.assertj.core.api.Assertions.*",
 					"com.aruba.simpl.common.test.TestUtil.*",
