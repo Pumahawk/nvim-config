@@ -1,4 +1,5 @@
 -- Telescope configuration
+
 -- Files 
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
@@ -28,3 +29,12 @@ vim.keymap.set('n', '<leader>p', builtin.commands, {})
 
 -- Diagnostic
 vim.keymap.set('n', '<leader>D', builtin.diagnostics, {})
+
+require('telescope').setup {
+  defaults = {
+    path_display = function(_, path)
+      local tail = vim.fn.fnamemodify(path, ":t")
+      return tail .. " (" .. path .. ")"
+    end
+  }
+}
