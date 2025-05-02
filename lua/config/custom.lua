@@ -36,3 +36,7 @@ vim.keymap.set('n', '<leader>dp', ':lua vim.diagnostic.goto_prev()<CR>', {})
 vim.keymap.set('n', '<leader>do', ':lua vim.diagnostic.open_float()<CR>', {})
 vim.keymap.set('n', '<leader>dl', ':lua vim.diagnostic.setloclist()<CR>', {})
 vim.keymap.set('n', '<leader>da', ':lua vim.diagnostic.setqflist()<CR>', {})
+
+-- Remove autocmd for zig
+
+vim.g.zig_fmt_autosave = 0
