@@ -10,6 +10,7 @@ require("mason-lspconfig").setup{
 	automatic_installation = true,
 } 
 
+if os.getenv("NVIM_LSP_JAVA") == "true" then
 -- START LSP Configuration
 --
 -- Java setup
@@ -41,9 +42,11 @@ require('lspconfig').jdtls.setup({
 		},
 	},
 })
+end
 
 -- require'lspconfig'.java_language_server.setup{}
 
+if os.getenv("NVIM_LSP_WEB") == "true" then
 -- Web setup
 require'lspconfig'.html.setup{}
 require'lspconfig'.ts_ls.setup{
@@ -56,25 +59,38 @@ require'lspconfig'.ts_ls.setup{
 }
 require'lspconfig'.eslint.setup{}
 require'lspconfig'.angularls.setup{}
+end
 
+if os.getenv("NVIM_LSP_DOCKER") == "true" then
 -- Docker
 require'lspconfig'.dockerls.setup{}
 require'lspconfig'.docker_compose_language_service.setup{}
+end
 
+if os.getenv("NVIM_LSP_GO") == "true" then
 -- Go
 require'lspconfig'.gopls.setup{}
+end
 
+if os.getenv("NVIM_LSP_LUA") == "true" then
 -- Lua
 require'lspconfig'.lua_ls.setup{}
+end
 
+if os.getenv("NVIM_LSP_JSON") == "true" then
 -- JSON
 require'lspconfig'.jsonls.setup{}
+end
 
+if os.getenv("NVIM_LSP_YAML") == "true" then
 -- YAML
 require'lspconfig'.yamlls.setup{}
+end
 
+if os.getenv("NVIM_LSP_HEALM") == "true" then
 -- Helm
 require'lspconfig'.helm_ls.setup{}
+end
 
 if os.getenv("NVIM_LSP_ZIG") == "true" then
 	-- Zig
