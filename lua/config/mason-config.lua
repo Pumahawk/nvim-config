@@ -31,6 +31,11 @@ require('lspconfig').jdtls.setup({
 			},
 			completion = {
 				favoriteStaticMembers = {
+					"io.restassured.module.mockmvc.RestAssuredMockMvc.*",
+					"io.restassured.module.jsv.JsonSchemaValidator.*",
+					"io.restassured.RestAssured.*",
+					"io.restassured.matcher.RestAssuredMatchers.*",
+					"org.hamcrest.Matchers.*",
 					"org.mockito.Mockito.*",
 					"org.mockito.BDDMockito.*",
 					"org.mockito.ArgumentMatchers.*",
@@ -38,6 +43,10 @@ require('lspconfig').jdtls.setup({
 					"com.aruba.simpl.common.test.TestUtil.*",
 					"org.junit.jupiter.api.Assertions.*",
 				},
+			},
+			contentProvider = { preferred = 'fernflower' },
+			eclipse = {
+				downloadSources = true
 			},
 		},
 	},
