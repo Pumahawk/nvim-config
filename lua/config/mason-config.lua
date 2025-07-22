@@ -106,3 +106,13 @@ if os.getenv("NVIM_LSP_ZIG") == "true" then
 	require'lspconfig'.zls.setup{}
 end
 
+if os.getenv("NVIM_LSP_CUCUMBER") == "true" then
+	-- Zig
+	require'lspconfig'.cucumber_language_server.setup{}
+end
+
+if os.getenv("NVIM_LSP_BASH") == "true" then
+	-- Zig
+	require'lspconfig'.bashls.setup{}
+end
+
