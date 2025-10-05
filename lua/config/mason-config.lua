@@ -91,6 +91,11 @@ if os.getenv("NVIM_LSP_JSON") == "true" then
 require'lspconfig'.jsonls.setup{}
 end
 
+if os.getenv("NVIM_LSP_XML") == "true" then
+-- XML
+require'lspconfig'.lemminx.setup{}
+end
+
 if os.getenv("NVIM_LSP_YAML") == "true" then
 -- YAML
 require'lspconfig'.yamlls.setup{}
@@ -112,7 +117,9 @@ if os.getenv("NVIM_LSP_CUCUMBER") == "true" then
 end
 
 if os.getenv("NVIM_LSP_BASH") == "true" then
-	-- Zig
 	require'lspconfig'.bashls.setup{}
 end
 
+if os.getenv("NVIM_LSP_PYTHON") == "true" then
+	require'lspconfig'.pyright.setup{}
+end
